@@ -32,7 +32,7 @@ public class ParseIntegers {
         }
         justWords= new StringBuilder(justWords.substring(0, justWords.length() - 1));
         System.out.println("Sum is " + sum);
-        System.out.println("Just words:" + justWords);
+        System.out.println("Just words: " + justWords);
     }
 }
 
