@@ -16,7 +16,7 @@ public class ParseIntegers {
                             .split(" "));
 
     public static void main(String[] args) {
-        Iterator<String> words = WORDS.iterator();
+         Iterator<String> words = WORDS.iterator();
         int sum = 0;
         StringBuilder justWords = new StringBuilder();
         while (words.hasNext()) {
@@ -25,12 +25,12 @@ public class ParseIntegers {
                 int number = Integer.parseInt(next);
                 sum += number;
             } catch (NumberFormatException e) {
-                justWords.append(next).append(" ");
+                justWords.append(next);
+                justWords.append(" ");
 
             }
-            justWords= new StringBuilder(justWords.substring(0, justWords.length() - 1));
-
         }
+        justWords= new StringBuilder(justWords.substring(0, justWords.length() - 1));
         System.out.println("Sum is " + sum);
         System.out.println("Just words:" + justWords);
     }
