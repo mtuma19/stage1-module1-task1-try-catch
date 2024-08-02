@@ -22,12 +22,13 @@ public class ParseIntegers {
         while (words.hasNext()) {
             String next = words.next();
             try {
-                    int number = Integer.parseInt(next);
-                    sum += number;
-                } catch (NumberFormatException  e) {
-                    justWords.append(next).append(" ");
+                int number = Integer.parseInt(next);
+                sum += number;
+            } catch (NumberFormatException e) {
+                justWords.append(next).append(" ");
 
-                }
+            }
+            justWords= new StringBuilder(justWords.substring(0, justWords.length() - 1));
 
         }
         System.out.println("Sum is " + sum);
